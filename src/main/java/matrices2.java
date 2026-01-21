@@ -20,6 +20,17 @@ public class matrices2 {
             }
             System.out.println();
         }
+        int contadorfilas;
+        int contadortotal=0;
+        System.out.println("Dime la fila para recontar:");
+        int fila= sc.nextInt();
+        contadorfilas=ref.calculaTotalPersonasPorFIlas(sala, fila);
+        System.out.println("Usted ha encontrado un total de"+contadorfilas+"asientos ocupados en esa fila");
+        System.out.println("Validamos el numero de asientos:");
+        contadortotal+=ref.calculaTotalPersonasPorFIlas(sala, 0);
+        contadortotal+=ref.calculaTotalPersonasPorFIlas(sala, 1);
+        contadortotal+=ref.calculaTotalPersonasPorFIlas(sala, 2);
+        ref.validaraforo(sala,contadortotal,contador);
     }
 
     int registraEspectadores(boolean[][] sala) {
@@ -40,7 +51,7 @@ public class matrices2 {
             if (fila < 0 || fila >= sala.length || asiento < 0 || asiento >= sala[0].length) {
                 System.out.println("Posición fuera de rango.");
             }
-            else if (sala[fila][asiento] == true) {
+            else if (sala[fila][asiento]) {
                 System.out.println("Ese asiento ya está ocupado.");
             }
             else {
@@ -54,7 +65,30 @@ public class matrices2 {
 
         return contador;
     }
+    int calculaTotalPersonasPorFIlas(boolean[][] salaP1,int filaP1){
+        int contadorfilas=0;
+        boolean[]filamatriz= salaP1[filaP1];
+        for(int i=0;i< filamatriz.length;i++){
+            if (filamatriz[i]){
+                contadorfilas++;
+        }
 
+    }
+
+        return contadorfilas;
+
+}
+    void validaraforo(boolean[][] salaP2,int contadormetodo2,int contadormetodo1){
+
+        if (contadormetodo1==contadormetodo2){
+            System.out.println("Esta correcto el conteo");
+        }
+        else {
+            System.out.println("Esta mal el conteo");
+        }
+
+
+    }
 
 }
 
