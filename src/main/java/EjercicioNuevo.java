@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class EjercicioNuevo {
     static void main() {
-        Scanner sc =new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int numero1;
-        numero1= sc.nextInt();
-        switch (numero1){
+        numero1 = sc.nextInt();
+        switch (numero1) {
             case 0:
                 System.out.println("El numero es cero");
                 break;

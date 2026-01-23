@@ -6,40 +6,41 @@ public class pruebaExpRegulares {
     static void main() {
         String numeros = "4816464163132463546374634676469546549687646446549859569549";
 
-        String patron= "\\d*";
+        String patron = "\\d*";
 
-        if (numeros.matches(patron)){
+        if (numeros.matches(patron)) {
             System.out.println("Hay solo numeros");
 
         }
 
-       String letras5="abcde";
-        String patron2="^\\[a-z]{5}$";
-        if (letras5.matches(patron2));{
+        String letras5 = "abcde";
+        String patron2 = "^\\[a-z]{5}$";
+        if (letras5.matches(patron2)) ;
+        {
             System.out.println("hay 5 letras minusculas");
         }
 
-        String letra8="abcdefghy";
-        String patron3="^\\w{8,}$";
-        if(letra8.matches(patron3)){
+        String letra8 = "abcdefghy";
+        String patron3 = "^\\w{8,}$";
+        if (letra8.matches(patron3)) {
             System.out.println("Hay 8 caracteres minimo");
         }
 
-        String matricula="6210KNB";
-        String patron4="^\\d{4}[A-Z]{3}$";
-        if(matricula.matches(patron4)){
+        String matricula = "6210KNB";
+        String patron4 = "^\\d{4}[A-Z]{3}$";
+        if (matricula.matches(patron4)) {
             System.out.println("La matricula es correcta");
         }
-        String grado="DAMiselabella";
-        String patron5="^\\DAM\\w*";
-        if(grado.matches(patron5)){
+        String grado = "DAMiselabella";
+        String patron5 = "^\\DAM\\w*";
+        if (grado.matches(patron5)) {
             System.out.println("El grado esta bien");
         }
-        String frasenumero="Asiodjsa98ud89qw89ecuqw897e0q2udo9auy8rfywq33r78fw3";
-        String patron6="[0-9]";
+        String frasenumero = "Asiodjsa98ud89qw89ecuqw897e0q2udo9auy8rfywq33r78fw3";
+        String patron6 = "[0-9]";
         Pattern papa = Pattern.compile(patron6);
         Matcher popo = papa.matcher(frasenumero);
-        if(popo.find()){
+        if (popo.find()) {
             System.out.println("Hay un digito en la cadena");
             System.out.println(popo.group());
         }
@@ -71,4 +72,5 @@ public class pruebaExpRegulares {
         }
 
 
-}}
+    }
+}

@@ -45,7 +45,6 @@ public class Retillo {
         recursogastado = sc.next();
 
 
-
         int indice = -1;
         int i = 0;
 
@@ -58,17 +57,17 @@ public class Retillo {
         String cadenote;
 
         if (indice != -1) {
-            System.out.println("Recurso encontrado " );
+            System.out.println("Recurso encontrado ");
 
-            cadenote=recursos[indice]+","+cantidades[indice]+","+niveles[indice];
-        }
-        else {
+            cadenote = recursos[indice] + "," + cantidades[indice] + "," + niveles[indice];
+        } else {
             System.out.println("Recurso no encontrado");
-            cadenote="-1";
+            cadenote = "-1";
         }
         return cadenote;
 
     }
+
     public static void comprobacion(String[] recursos, int[] cantidades, int[] niveles, String resultado) {
 
         if (resultado.equals("-1")) {

@@ -8,10 +8,10 @@ public class ejercicio6 {
         System.out.println("4.Rosa");
         System.out.println("5.Gris");
         System.out.println("Introduce el numero de tu habitacion preferida");
-        Scanner sc =new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int numero1;
-        numero1= sc.nextInt();
-        switch (numero1){
+        numero1 = sc.nextInt();
+        switch (numero1) {
             case 1:
                 System.out.println("Tiene dos camas en la primera planta");
                 break;
