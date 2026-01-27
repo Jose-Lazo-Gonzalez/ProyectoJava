@@ -1,7 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class matrices3 {public static void main(String[] args) {
     matrices3 ref=new matrices3();
     int[][] matriz = new int[5][5];
     Random random = new Random();
@@ -21,7 +20,6 @@ public class matrices3 {public static void main(String[] args) {
         System.out.println();
     }
     int opcion=0;
-    do { opcion= ref.menu();
         switch (opcion){
             case 1:
                 ref.identificaramenazas(matriz);

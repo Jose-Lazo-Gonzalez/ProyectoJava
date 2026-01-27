@@ -14,7 +14,7 @@ public class piramide {
 
 
             for (int j = 1; j <= (2 * i - 1); j++) {
-                if (i == 1 ) {
+                if (i == 1) {
 
                     System.out.print("*");
                 } else {

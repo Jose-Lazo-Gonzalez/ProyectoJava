@@ -5,15 +5,15 @@ public class ejercicio8 {
         System.out.println("Elige que tipo de operacion vas a realizar");
         Scanner sc = new Scanner(System.in);
         String operacion;
-        operacion = sc.next ();
-        switch (operacion){
+        operacion = sc.next();
+        switch (operacion) {
             case "suma":
                 System.out.println("Introduce los numeros a sumar");
                 int numero1;
                 int numero2;
                 numero1 = sc.nextInt();
                 numero2 = sc.nextInt();
-                System.out.println(numero1+numero2);
+                System.out.println(numero1 + numero2);
                 break;
             case "resta":
                 System.out.println("Introduce los numeros a restar");
