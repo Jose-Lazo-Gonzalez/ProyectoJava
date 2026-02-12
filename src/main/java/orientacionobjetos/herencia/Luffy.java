@@ -13,7 +13,7 @@ public class Luffy extends Personajeanime{
 
 
 
-    void reir(){
+    public void reir(){
         System.out.println("se rie");
     }
 
