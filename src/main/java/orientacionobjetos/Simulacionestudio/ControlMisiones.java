@@ -14,14 +14,14 @@ public class ControlMisiones {
         Mlogistica aceitunas = new Mlogistica(141, "Comidita", LocalDate.of(2026, 3, 15), nave1, 100);
         Mlogistica desodorante = new Mlogistica(161, "higiene", LocalDate.of(2026, 3, 12), nave2, 40);
 
-        // Array fijo de 4 misiones
+        // Array fijo
         Mision[] misiones = new Mision[4];
         misiones[0] = marte;
         misiones[1] = jupiter;
         misiones[2] = aceitunas;
         misiones[3] = desodorante;
 
-        // Recorrer e imprimir solo misiones de riesgo
+        // Recorrer
         for (Mision m : misiones) {
             if (m.riesgomision()) {
                 System.out.println(m);
