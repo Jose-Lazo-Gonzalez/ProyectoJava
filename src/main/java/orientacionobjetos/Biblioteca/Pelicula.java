@@ -16,6 +16,7 @@ public class Pelicula extends ElementoMultimedia {
 
     @Override
     public int getDevuelveDiasPrestamo() {
+
         return 10;
     }
 }

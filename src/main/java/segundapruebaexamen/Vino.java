@@ -16,6 +16,14 @@ public class Vino extends Producto implements Descuentos,Liquido, Alimento {
         this.precio = precio;
     }
 
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
     @Override
     public void setCaducidad(Date fecha) {
 

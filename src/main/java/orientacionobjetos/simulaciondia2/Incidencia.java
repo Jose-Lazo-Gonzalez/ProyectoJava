@@ -1,25 +1,27 @@
 package orientacionobjetos.simulaciondia2;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class Incidencia {
 
     private int id;
     private String nombre;
     private String descripcion;
-    private String fechaRegistro;
-    private String fechaCierre;
+    private LocalDate fechaRegistro;
+    private LocalDate fechaCierre;
     private Estado estado;
     private Criticidad criticidad;
     private Equipo equipo;
 
     public Incidencia(int id, String nombre, String descripcion,
-                      String fechaRegistro,
                       Criticidad criticidad,
                       Equipo equipo) {
 
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.fechaRegistro = fechaRegistro;
+        this.fechaRegistro = LocalDate.now();
         this.criticidad = criticidad;
         this.equipo = equipo;
         this.estado = Estado.REGISTRADA;
@@ -28,9 +30,9 @@ public class Incidencia {
         equipo.incrementarIncidencias();
     }
 
-    public void cerrarIncidencia(String fechaCierre) {
+    public void cerrarIncidencia() {
         this.estado = Estado.CERRADA;
-        this.fechaCierre = fechaCierre;
+        this.fechaCierre = LocalDate.now();
         equipo.decrementarIncidencias();
     }
 
@@ -39,7 +41,7 @@ public class Incidencia {
         if (criticidad == Criticidad.CRITICA)
             return true;
 
-        int dias = calcularDiasTranscurridos(fechaRegistro, obtenerFechaActual());
+        long dias = ChronoUnit.DAYS.between(fechaRegistro, LocalDate.now());
 
         if (criticidad == Criticidad.GRAVE && dias >= 7)
             return true;
@@ -50,24 +52,6 @@ public class Incidencia {
         return false;
     }
 
-    private int calcularDiasTranscurridos(String fechaInicio, String fechaFin) {
-        return convertirADias(fechaFin) - convertirADias(fechaInicio);
-    }
-
-    private int convertirADias(String fecha) {
-
-        String[] partes = fecha.split("/");
-        int dia = Integer.parseInt(partes[0]);
-        int mes = Integer.parseInt(partes[1]);
-        int anio = Integer.parseInt(partes[2]);
-
-        return anio * 365 + mes * 30 + dia;
-    }
-
-    private String obtenerFechaActual() {
-        return "17/02/2026";
-    }
-
     @Override
     public String toString() {
         return nombre + " - " + estado + ": " + criticidad
@@ -75,4 +59,5 @@ public class Incidencia {
                 + " - " + equipo.getNombre();
     }
 }
+
 

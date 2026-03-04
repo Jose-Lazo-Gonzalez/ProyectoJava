@@ -43,5 +43,11 @@ public class GestionaProductos {
 
         System.out.println("------------------------------------");
         System.out.println("Total calorías acumuladas: " + caloriasTotales);
+
+        System.out.println(v1.getMarca());
+        v1.setMarca("Osborne");
+        System.out.println(v1.getMarca());
+
     }
+
 }

@@ -15,7 +15,7 @@ public abstract class ElementoMultimedia implements Prestable {
         this.identificador = identificador;
         this.ubicacion = ubicacion;
         this.unidadesTotales = unidadesTotales;
-        this.unidadesPrestadas = 0;
+        this.unidadesPrestadas = unidadesPrestadas;
         this.nombre = nombre;
         this.genero = genero;
     }

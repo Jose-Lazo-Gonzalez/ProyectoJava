@@ -24,7 +24,6 @@ public class GestionaIncidenciasEquipo {
                 1,
                 "Actualización JDK",
                 "Error al actualizar",
-                "07/02/2026",
                 Criticidad.GRAVE,
                 e1);
 
@@ -32,7 +31,6 @@ public class GestionaIncidenciasEquipo {
                 2,
                 "Virus detectado",
                 "Malware activo",
-                "17/02/2026",
                 Criticidad.CRITICA,
                 e2);
 
@@ -40,7 +38,6 @@ public class GestionaIncidenciasEquipo {
                 3,
                 "Lentitud sistema",
                 "Sistema muy lento",
-                "08/01/2026",
                 Criticidad.MEDIA,
                 e1);
 
@@ -48,7 +45,6 @@ public class GestionaIncidenciasEquipo {
                 4,
                 "Teclado roto",
                 "No funciona la tecla enter",
-                "17/02/2026",
                 Criticidad.LEVE,
                 e3);
 

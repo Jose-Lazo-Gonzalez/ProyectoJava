@@ -16,7 +16,7 @@ public class Libro implements Prestable {
         this.identificador = identificador;
         this.ubicacion = ubicacion;
         this.unidadesTotales = unidadesTotales;
-        this.unidadesPrestadas = 0;
+        this.unidadesPrestadas = unidadesPrestadas;
         this.autor = autor;
         this.editorial = editorial;
         this.generoLiterario = generoLiterario;
